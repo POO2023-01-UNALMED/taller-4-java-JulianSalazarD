@@ -5,10 +5,15 @@ public class Persona {
     final long cedula;
     String nombre;
     static int totalPersonas;
-    
+
     static {
         totalPersonas = 0;
-        cedula = 3;
+    }
+
+    //agregar constructor sin argumentos
+    public Persona(){
+        this.cedula = 0;
+        totalPersonas ++;
     }
 
     public Persona(long cedula, String nombre) {
@@ -16,7 +21,7 @@ public class Persona {
         this.nombre = nombre;
         totalPersonas++;
     }
-    
+
     public Persona(String nombre, long cedula) {
         this.cedula = cedula;
         this.nombre = nombre;
@@ -30,10 +35,12 @@ public class Persona {
     }
 
     public Persona(String nombre) {
-        this.nombre = "";
+        this.nombre = nombre;
+        //asignar valor al atributo cedulo
+        this.cedula = 1;
         totalPersonas++;
     }
-    
+
     public long getCedula() {
         return cedula;
     }

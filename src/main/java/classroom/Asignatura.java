@@ -3,20 +3,13 @@ package classroom;
 public class Asignatura {
 
     public String nombre;
-    String n = nombre;
     public int codigoInterno;
     public int codigoExterno;
     public Tipo tipo;
 
     public Asignatura() {
         this("Sin nombre",Tipo.FUNDAMENTACION);
-        this(0);
     }
-
-    public Asignatura(int codigoInterno,Tipo tipo) {
-        this("Sin nombre", codigoInterno, 0,tipo);
-    }
-
     public Asignatura(int codigoExterno,Tipo tipo) {
         this("Sin nombre", 0, codigoExterno,tipo);
     }
@@ -31,7 +24,6 @@ public class Asignatura {
         this.codigoExterno = codigoExterno;
         this.tipo = tipo;
     }
-
     public void cambiarDatos(int codigoInterno, int codigoExterno, String nombre,Tipo tipo) {
         this.codigoInterno = codigoInterno;
         this.codigoExterno = codigoExterno;
@@ -39,10 +31,7 @@ public class Asignatura {
         this.tipo = tipo;
     }
 
-    public void cambiarDatos(int codigoInterno) {
-        this.codigoInterno = codigoInterno;
-    }
-
+    //se modifica el atributo codigoExterno
     public void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
     }
